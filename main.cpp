@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 #include "include/include.hpp"
 
 using namespace std;
+using namespace std::chrono;
 
 void imprime_vetor (const vector<int>& vetor, const string& mensagem) {
     cout << mensagem;
@@ -10,13 +12,24 @@ void imprime_vetor (const vector<int>& vetor, const string& mensagem) {
     cout << endl;
 }
 
+template<typename Func>
+auto tempo_exec(vector<int>& vetor, Func sort_func, const string& mensagem){
+    auto inicio = high_resolution_clock::now();
+    sort_func(vetor);
+    auto fim = high_resolution_clock::now();
+    auto duracao = duration_cast<microseconds>(fim - inicio).count();
+    imprime_vetor(vetor, "Vetor após " + mensagem + ": ");
+    cout << mensagem << " levou " << duracao << " microsegundos." << endl;
+}
+
 template<typename Func> // Permite que uma função seja passada como parâmetro
 void imprime_sort(vector<int>& vetor, Func sort_func, const string& mensagem) {
     imprime_vetor(vetor, "Vetor original: ");
-    sort_func(vetor);
-    imprime_vetor(vetor, "Vetor após " + mensagem + ": ");
+    tempo_exec(vetor, sort_func, mensagem);
     cout << endl;
 }
+
+
 
 int main() {
     int tamanho_array = 5;

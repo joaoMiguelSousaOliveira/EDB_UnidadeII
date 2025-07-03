@@ -15,15 +15,13 @@ INCDIR = include   # Diretório dos arquivos de cabeçalho (.hpp)
 CXX = g++
 CXXFLAGS = -Wall -g -std=c++17 -I$(INCDIR)
 
-SRCDIR = src
+SRCDIR = codigos
 OBJDIR = obj
 INCDIR = include
 TARGET = atividade_02
 
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
-MAIN = main.cpp
 HPP_FILES = $(wildcard $(INCDIR)/*.hpp)
-
 OBJS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS)) $(OBJDIR)/main.o
 
 # --- REGRAS DO MAKEFILE ---
