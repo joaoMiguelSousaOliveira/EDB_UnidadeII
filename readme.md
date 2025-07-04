@@ -1,3 +1,7 @@
+# Análise Comparativa de Algoritmos de Ordenação
+
+Este trabalho tem como objetivo aplicar e comparar os pricipais tipos de Algoritmos de ordenação
+
 # Selection Sort
 
 Consiste em um algoritmo de classificação baseado em comparação. Ele classifica uma matriz por meio da repetida troca de posição do menor elemento não classificado pela menor posição disponível.

@@ -38,11 +38,7 @@ fig, ax = plt.subplots(figsize=(10, 6))
 plt.title('Tempo Médio: Conjunto de Dados Inversamente Ordenados')
 plt.xlabel('Método de Ordenação')
 plt.ylabel('Tempo Médio (microsegundos)')
-plt.legend()
 plt.grid(True)  
 
 plt.bar(dados_inversamente['Método de ordenação'], dados_inversamente['Tempo médio (microsegundos)'], color=cores[:len(dados_inversamente)])
 plt.savefig('graficos/grafico_inversamente.png')
-
-
-plt.show()
