@@ -4,16 +4,21 @@
 using namespace std;
 
 void bublesort(vector<int>& vetor) {
-    bool mudou = true;
-    int fim = vetor.size() - 1;
-    while (mudou) {
-        mudou = false;
-        for (int i = 0; i < fim; i++) {
-            if (vetor[i] > vetor[i + 1]) {
-                swap(vetor[i], vetor[i + 1]);
-                mudou = true;
+    int n = vetor.size();
+
+    bool trocou;
+
+    for (int i = 0; i < n - 1; i++) {
+        trocou = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (vetor[j] > vetor[j + 1]) {
+                swap(vetor[j], vetor[j + 1]);
+                trocou = true;
             }
         }
-        fim--;
+        // Se não houve troca, o vetor já está ordenado
+        if (!trocou) {
+            break;
+        }
     }
 }

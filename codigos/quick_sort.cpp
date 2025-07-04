@@ -1,11 +1,10 @@
-#include <iostream>
+#include <iostream> 
 #include <vector>
 #include "../include/include.hpp"
 
 using namespace std;
 
 void quick_sort (vector<int>& vetor, int inicio, int fim) {
-    if (fim == -1) fim = vetor.size() - 1;
     if (inicio < fim) {
         int pivo = partition(vetor, inicio, fim);
         quick_sort(vetor, inicio, pivo - 1);
@@ -15,18 +14,18 @@ void quick_sort (vector<int>& vetor, int inicio, int fim) {
 
 int partition (vector<int>& vetor, int inicio, int fim) {
     int pivo = vetor[fim];
-    int i = inicio;
+    int i = inicio - 1;
 
-    for (int j = inicio; j < fim; j++) {
-        if (vetor[j] <= pivo) {
-            swap(vetor[i], vetor[j]);
+    for (int j = inicio; j <= fim - 1; j++) {
+        if (vetor[j] < pivo) { 
             i++;
+            swap(vetor[i], vetor[j]);
         }
     }
-    swap(vetor[i], vetor[fim]);
-    return i;
+    swap(vetor[i + 1], vetor[fim]);
+    return i + 1;
 }
 
 void quick_sort_wrapper(vector<int>& vetor) {
-    quick_sort(vetor, 0, -1);
+    quick_sort(vetor, 0, vetor.size() - 1);
 }

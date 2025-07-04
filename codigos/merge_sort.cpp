@@ -45,6 +45,6 @@ void merge_sort_wrapper(vector<int>& vetor) {
     if (vetor.empty()) {
         return;
     }
-    merge_sort(vetor, 0, vetor.size());
+    merge_sort(vetor, 0, vetor.size() - 1);
 }
 
