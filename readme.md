@@ -123,6 +123,17 @@ Consiste em um algoritmo de classificação baseada no **Dividir para conquistar
 
 **`O(n)`**, devido a pilha de chamadas recursivas
 
+
+## Complexidade dos algoritmos 
+
+| Algoritmo       | Melhor Caso      | Caso Médio        | Pior Caso         | Espaço Auxiliar | Estável | In-place |
+|------------------|------------------|--------------------|--------------------|------------------|---------|----------|
+| Quicksort        | O(n log n)       | O(n log n)         | O(n²)              | O(log n)         | Não     | Sim      |
+| Mergesort        | O(n log n)       | O(n log n)         | O(n log n)         | O(n)             | Sim     | Não      |
+| Insertion Sort   | O(n)             | O(n²)              | O(n²)              | O(1)             | Sim     | Sim      |
+| Selection Sort   | O(n²)            | O(n²)              | O(n²)              | O(1)             | Não     | Sim      |
+| Bubble Sort      | O(n)             | O(n²)              | O(n²)              | O(1)             | Sim     | Sim      |
+
 ## Metodologia
 
 ### Tipos de Dados
@@ -214,5 +225,10 @@ long long tempo_medio_exec(const vector<int>& vetor, Func sort_func){
 
 ### **`Conjunto de Dados Inversamente Ordenados`**
 <img src="graficos/grafico_inversamente.png">
+
+### Discussão
+<hr>
+
+
 
 
