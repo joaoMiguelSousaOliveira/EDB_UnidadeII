@@ -145,7 +145,7 @@ Foram utilizados nos testes conjuntos de dados com as seguites configuações:
 * **`Inversamente Ordenados`**
 
 ### Tamanho dos Conjuntos de dados
-Foram utilizados vetores de **`1000`** elementos, com valores entre **`1`** e **`100`**
+Foram utilizados vetores de **`1000`** elementos, com valores entre **`1`** e **`1000`**
 
 ### Métricas 
 
@@ -153,7 +153,7 @@ Coletou-se informações à respeito do tempo de execução de cada algoritmo de
 
 ### Método de medição
 
-Para a medição de tempo de execução, fora utilizado a função **`tempo_medio_exec`** no arquivo **`main.cpp`**. Essa função utiliza da biblioteca padrão do C++ **`<chrono>`** para a medição do tempo.A função recebe como parâmetro um dos algoritos de ordenação declarados no arquivo **`include/includes.hpp`** e o vetor que será ordenado. A função retorna o tempo médio de execução da implementação em 100 aplicações diferentes, utilizou-se dessa metodologia para aumentar a fidedignidade dos dados, já que apenas uma ou duas aplciações do mesmo algoritmo para o mesmo vetor não seria suficiente para levantar dados próximos da realidade de cada algoritmo, já que a apicação estaria sujeita a forte influencia de questões como hardware e memória cache disponível no momento.
+Para a medição de tempo de execução, fora utilizado a função **`tempo_medio_exec`** no arquivo **`main.cpp`**. Essa função utiliza da biblioteca padrão do C++ **`<chrono>`** para a medição do tempo. A função recebe como parâmetro um dos algoritos de ordenação declarados no arquivo **`include/includes.hpp`** e o vetor que será ordenado. A função retorna o tempo médio de execução da implementação em 100 aplicações diferentes. Utilizou-se dessa metodologia para aumentar a fidedignidade dos dados, já que apenas uma ou duas aplciações do mesmo algoritmo para o mesmo vetor não seriam suficientes para levantar dados próximos da realidade de cada algoritmo, já que a apicação estaria sujeita a forte influencia de questões como hardware e memória do dispositivo.
 
 ```c++
 #include <chrono>
@@ -187,31 +187,31 @@ long long tempo_medio_exec(const vector<int>& vetor, Func sort_func){
 
 | Método de Ordenação | Tempo Médio (µs) |
 |----------------------|------------------|
-| Selection Sort       | 198.197          |
-| Insertion Sort       | 103.603          |
-| Bubble Sort          | 328.742          |
-| Merge Sort           | 3.145            |
-| Quick Sort           | 1.769            |
+| Selection Sort       | 198.054          |
+| Insertion Sort       | 103.486         |
+| Bubble Sort          | 331.593         |
+| Merge Sort           | 3.283            |
+| Quick Sort           | 1.249            |
 
 ### **`Conjunto de Dados Parcialmente Ordenados`**
 
 | Método de Ordenação | Tempo Médio (µs) |
 |----------------------|------------------|
-| Selection Sort       | 197.601           |
-| Insertion Sort       | 77.875            |
-| Bubble Sort          | 282.083           |
-| Merge Sort           | 2.827             |
-| Quick Sort           | 1.634             |
+| Selection Sort       | 199.267           |
+| Insertion Sort       | 78.318           |
+| Bubble Sort          | 287.804           |
+| Merge Sort           | 3.024             |
+| Quick Sort           | 1.188           |
 
 ### **`Conjunto de Dados Inversamente Ordenados`**
 
 | Método de Ordenação | Tempo Médio (µs) |
 |----------------------|------------------|
-| Selection Sort       | 200.280           |
-| Insertion Sort       | 205.243           |
-| Bubble Sort          | 483.131           |
-| Merge Sort           | 2.590             |
-| Quick Sort           | 6.089             |
+| Selection Sort       | 209.896           |
+| Insertion Sort       | 210.913           |
+| Bubble Sort          | 487.754          |
+| Merge Sort           | 2.556             |
+| Quick Sort           | 47.483            |
 
 
 ### Graficos

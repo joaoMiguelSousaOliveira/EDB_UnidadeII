@@ -1,6 +1,6 @@
 Método de ordenação;Tempo médio (microsegundos)
-Selection Sort;198197
-Insertion Sort;103603
-Bubble Sort;328742
-Merge Sort;3145
-Quick Sort;1769
+Selection Sort;198054
+Insertion Sort;103486
+Bubble Sort;331593
+Merge Sort;3283
+Quick Sort;1249

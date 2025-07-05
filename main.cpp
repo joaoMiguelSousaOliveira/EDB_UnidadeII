@@ -54,7 +54,7 @@ void salvar_tempo_exec(const string& arquivo, const vector<int>& vetor) {
 int main() {
     int tamanho_array = 10000;
     int min_valor = 1;
-    int max_valor = 100;
+    int max_valor = 1000;
 
     vector<int> array = gera_array(tamanho_array, min_valor, max_valor);
     vector<int> array_parcialmente_ordenado = gera_array_parcialmente_ordenado(tamanho_array, min_valor, max_valor);
