@@ -5,16 +5,12 @@ CXX = g++
 CXXFLAGS = -Wall -g -std=c++17 -I$(INCDIR)
 
 CSV_DIR = CSV
-PNG_DIR = graficos
+PNG_DIR = Graficos
 OBJDIR = obj       
 INCDIR = include   
-CXX = g++
-CXXFLAGS = -Wall -g -std=c++17 -I$(INCDIR)
-
-SRCDIR = codigos
+SRCDIR = src
 OBJDIR = obj
-INCDIR = include
-TARGET = atividade_02
+TARGET = aplicacao
 
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
 HPP_FILES = $(wildcard $(INCDIR)/*.hpp)
@@ -22,12 +18,12 @@ OBJS = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRCS)) $(OBJDIR)/main.o
 
 all: $(TARGET) graficos
 
-graficos:
+graficos: 
 	python3 graficos.py
+
 
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
-
 
 $(TARGET): $(OBJS)
 	$(CXX) $(OBJS) -o $(TARGET)
@@ -44,4 +40,4 @@ clean:
 	rm -f $(CSV_DIR)/*.csv
 	rm -f $(PNG_DIR)/*.png
 
-.PHONY: all clean $(OBJDIR)
+.PHONY: all clean 
