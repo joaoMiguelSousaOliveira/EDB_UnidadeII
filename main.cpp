@@ -52,7 +52,7 @@ int main() {
     file_out.close();
 
     // Define os tamanhos do array e os valores mínimo e máximo
-    vector<int> tamanho_array = {500, 1000, 5000, 10000, 50000};
+    vector<int> tamanho_array = {500, 1000, 5000, 10000, 15000};
     int min_valor = 1;
     int max_valor = 1000000;
 
